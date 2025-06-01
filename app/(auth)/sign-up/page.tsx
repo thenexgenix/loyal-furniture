@@ -14,7 +14,7 @@ export default function SignUpPage() {
   }
 
   return (
-    <div className="min-h-screen flex">
+    <div className="flex">
       <div className="hidden w-full md:flex md:justify-center md:items-center md:w-1/2 relative p-8">
         <Image
           src="/furniture.svg"

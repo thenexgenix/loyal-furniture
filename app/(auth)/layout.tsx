@@ -6,8 +6,8 @@ interface AuthLayoutProps {
 
 const AuthLayout = ({ children }: AuthLayoutProps) => {
   return (
-    <div className="flex flex-col min-h-screen relative">
-      <div className="absolute -top-28 -left-20 z-10">
+    <div className="flex flex-col">
+      <div className="px-10 pt-3">
         <Logo />
       </div>
       {children}

@@ -5,12 +5,12 @@ import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Link href="/" className="inline-block">
+    <Link href="/">
       <Image
         src="/logo.svg"
         alt="Loyal Furniture Logo"
-        width={384}
-        height={384}
+        width={80}
+        height={80}
         priority
       />
     </Link>

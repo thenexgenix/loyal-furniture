@@ -1,5 +1,242 @@
 # Changelog
 
+## [v1.4.0] - 2025-06-01
+
+### 📞 Contact Page Overlay Design Implementation
+
+This release implements a modern overlay design pattern for the contact page, enhancing visual hierarchy and user experience through professional layout improvements.
+
+---
+
+## 📋 Summary of Changes
+
+### ✨ New Features
+
+#### 🎨 Contact Page Overlay Design
+- **Modern Overlay Pattern** - Contact section now floats elegantly over gradient background
+- **Enhanced Visual Hierarchy** - Professional depth with strategic shadow effects
+- **Improved Form State Management** - Connected all form inputs to React state with proper validation
+- **Better User Experience** - Smooth form interactions with comprehensive error handling
+- **Professional Styling** - Brand-consistent button styling with hover effects
+- **Responsive Design Excellence** - Optimized layout for all screen sizes and devices
+
+### 🗂️ Files Modified
+
+#### 📝 Component Updates
+- **`app/(root)/contact-us/page.tsx`**
+  - Implemented overlay design pattern with absolute positioning
+  - Enhanced gradient background with professional color scheme
+  - Added comprehensive form state management with React hooks
+  - Connected all form fields (name, phone, email, message) to state
+  - Implemented proper form validation with required field handling
+  - Added form submission logic with navigation to thank-you page
+  - Enhanced button styling with brand-consistent purple theme
+  - Improved responsive design with proper spacing and layout
+  - Added shadow-2xl for professional depth and visual appeal
+  - Implemented proper form reset functionality after submission
+
+### 🔧 Technical Improvements
+
+#### 📊 User Experience
+- **Form State Management** - Proper React state handling for all form inputs
+- **Real-time Validation** - Required field validation with user feedback
+- **Professional Appearance** - Modern overlay creates sophisticated visual hierarchy
+- **Smooth Interactions** - Enhanced hover states and transition effects
+- **Better Accessibility** - Proper form labeling and keyboard navigation
+- **Form Reset** - Automatic form clearing after successful submission
+
+#### 🎯 Design Excellence
+- **Strategic Positioning** - Contact section positioned at optimal viewing height
+- **Visual Depth** - Shadow effects create professional layered appearance
+- **Brand Consistency** - Purple theme maintained throughout form elements
+- **Typography Hierarchy** - Clear visual distinction between headings and content
+- **Responsive Layout** - Grid system optimized for desktop and mobile viewing
+
+#### 🔍 Code Quality
+- **Clean Component Structure** - Well-organized component hierarchy
+- **Efficient State Management** - Optimized React state handling patterns
+- **Type Safety** - Proper TypeScript integration for form handling
+- **Event Handling** - Professional form submission and input change handlers
+
+---
+
+## 🚀 Implementation Details
+
+### 📐 Layout Architecture
+```
+- Gradient Background Container (500px height)
+- Absolute Positioned Overlay (starts at top-32)
+- Two-Column Grid Layout (contact info | form)
+- Professional Shadow Effects (shadow-2xl)
+- Brand-Consistent Color Scheme (#380e4f purple theme)
+```
+
+### 🎨 Visual Enhancements
+- **Background Gradient** - Multi-stop gradient for visual appeal
+- **Overlay Shadow** - Deep shadow for professional depth effect
+- **Form Styling** - Clean white form container with proper spacing
+- **Button Design** - Brand-consistent purple with hover effects
+- **Typography** - Clear hierarchy with proper contrast ratios
+
+---
+
+## 🧪 Testing Notes
+
+### ✅ Verified Functionality
+- Form state management working correctly for all fields
+- Form validation preventing submission of empty required fields
+- Form submission redirecting to thank-you page as expected
+- Form reset clearing all fields after successful submission
+- Responsive design tested across multiple breakpoints
+- Visual overlay effects displaying properly on all devices
+- Button hover states and transitions working smoothly
+
+### 🔍 Areas for Future Enhancement
+- Backend API integration for actual form submission
+- Enhanced validation with custom error message display
+- Success/error toast notifications for better user feedback
+- Form field validation with regex patterns for email/phone
+- Analytics integration for form submission tracking
+
+---
+
+## 📚 Architecture Notes
+
+### 🏗️ Design Patterns Implemented
+- **Overlay Design Pattern** - Modern floating content over background
+- **Form State Management** - React hooks for efficient state handling
+- **Responsive Design Principles** - Mobile-first responsive approach
+- **Brand Consistency** - Unified color scheme and typography
+
+### 🔄 User Experience Benefits
+- **Professional Appearance** - Modern overlay creates sophisticated look
+- **Enhanced Accessibility** - Proper form labeling and keyboard navigation
+- **Better Visual Hierarchy** - Clear distinction between sections
+- **Smooth Interactions** - Professional hover states and transitions
+- **Form Usability** - Clear validation feedback and submission handling
+
+---
+
+## [v1.3.0] - 2025-06-01
+
+### 🎨 UI/UX Enhancements & Component Improvements
+
+This release focuses on improving user interface components and user experience through modern design patterns, enhanced search functionality, and professional contact page layout.
+
+---
+
+## 📋 Summary of Changes
+
+### ✨ New Features
+
+#### 🔍 Header Search Component Redesign
+- **Minimal Search Design** - Streamlined search interface with modern rounded-full container
+- **Integrated Category Selector** - Unified search experience with category filtering
+- **Enhanced Visual Design** - Single container with focus states and smooth transitions
+- **Improved User Experience** - Better visual hierarchy and interaction patterns
+- **Expanded Categories** - Added Beds and Cabinets for comprehensive furniture filtering
+
+#### 📞 Contact Page Layout Overhaul
+- **Overlay Design Pattern** - Contact section now floats over gradient background
+- **Enhanced Visual Hierarchy** - Professional overlay effect with shadow depth
+- **Improved Form Functionality** - Connected form state with proper validation
+- **Better Responsive Design** - Optimized layout for all screen sizes
+- **Professional Appearance** - Modern overlay creates sophisticated look
+
+### 🗂️ Files Modified
+
+#### 📝 Component Updates
+- **`components/header.tsx`**
+  - Redesigned search bar with unified container approach
+  - Implemented rounded-full design for modern aesthetics
+  - Added focus-within states for better accessibility
+  - Integrated category selector with seamless visual flow
+  - Added subtle separator between category and search input
+  - Enhanced transition effects and hover states
+  - Expanded category options (All, Chairs, Tables, Sofas, Beds, Cabinets)
+
+- **`app/(root)/contact-us/page.tsx`**
+  - Implemented overlay design pattern with absolute positioning
+  - Enhanced gradient background with increased height (500px)
+  - Added professional shadow effects (shadow-2xl) for depth
+  - Connected all form inputs to state management
+  - Added proper form validation with required fields
+  - Improved button styling with brand consistency
+  - Added responsive design improvements
+  - Implemented proper form submission handling
+
+### 🔧 Technical Improvements
+
+#### 📊 Code Quality
+- **Better State Management** - Proper form state handling in contact page
+- **Enhanced Accessibility** - Focus states and proper form labeling
+- **Improved User Feedback** - Visual feedback for form interactions
+- **Type Safety** - Proper TypeScript integration for form handling
+
+#### 🎯 Performance
+- **Optimized Rendering** - Efficient component structure
+- **Smooth Animations** - CSS transitions for better user experience
+- **Responsive Design** - Mobile-first approach with proper breakpoints
+- **Better Layout Flow** - Proper positioning and spacing
+
+#### 🔍 Developer Experience
+- **Consistent Design Patterns** - Unified approach to component styling
+- **Maintainable Code** - Clear separation of concerns
+- **Reusable Patterns** - Design patterns that can be applied elsewhere
+- **Clear Component Structure** - Well-organized component hierarchy
+
+---
+
+## 🚀 Upgrade Instructions
+
+### For Developers
+1. **No Breaking Changes** - All existing functionality preserved
+2. **Enhanced Components** - Header and contact page now more user-friendly
+3. **Design Consistency** - Updated components follow modern UI patterns
+4. **Form Validation** - Contact form now includes proper validation
+
+### For Users
+1. **Better Search Experience** - More intuitive search with category filtering
+2. **Professional Contact Page** - Enhanced visual appeal and functionality
+3. **Improved Mobile Experience** - Better responsive design across devices
+4. **Enhanced Accessibility** - Better focus states and form interactions
+
+---
+
+## 🧪 Testing Notes
+
+### ✅ Verified Functionality
+- Header search with category filtering works correctly
+- Contact form state management and validation functional
+- Responsive design tested across breakpoints
+- Focus states and accessibility features verified
+- Form submission handling working properly
+- Visual transitions and animations smooth
+
+### 🔍 Areas for Future Enhancement
+- Search autocomplete functionality
+- Contact form success/error messaging
+- Analytics integration for search behavior
+- Advanced form validation with custom error messages
+
+---
+
+## 📚 Architecture Notes
+
+### 🏗️ Design Patterns Implemented
+- **Overlay Design Pattern** - Modern floating content over background
+- **Unified Container Approach** - Cohesive search experience design
+- **Form State Management** - Proper React state handling patterns
+- **Responsive Design Principles** - Mobile-first responsive approach
+
+### 🔄 User Experience Benefits
+- **Intuitive Navigation** - Streamlined search and filtering
+- **Professional Appearance** - Modern design language throughout
+- **Better Form Experience** - Clear validation and user feedback
+- **Consistent Brand Experience** - Unified design across components
+
+---
+
 ## [v1.2.0] - 2025-06-01
 
 ### 🧩 Footer Component Refactoring & DRY Implementation

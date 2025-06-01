@@ -4,18 +4,18 @@ import Logo from "@/components/logo";
 
 export default function Loading() {
   return (
-    <div className="max-h-screen flex flex-col items-center justify-center p-4">
-      <div className="flex flex-col items-center gap-6 max-w-md text-center">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4">
+      <div className="flex flex-col items-center gap-6 max-w-lg text-center">
         <div className="relative animate-pulse">
           <div className="transform scale-75 transition-transform duration-1000 hover:scale-80">
             <Logo />
           </div>
 
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="h-32 w-32 rounded-full border-2 border-primary/20 animate-ping"></div>
+            <div className="h-[80px] w-[100px] rounded-full border-2 border-primary/20 animate-ping"></div>
           </div>
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="h-28 w-28 rounded-full border border-primary/30 animate-pulse"></div>
+            <div className="h-[80px] w-[110px] rounded-full border border-primary/30 animate-pulse"></div>
           </div>
         </div>
 

@@ -114,8 +114,7 @@ const FooterSection = ({
 
 const Footer = () => {
   return (
-    <footer className="bg-[#380e4f] text-white mt-16">
-      {/* Newsletter Section */}
+    <footer className="bg-[#380e4f] text-white">
       <div className="px-4 py-12">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
@@ -141,7 +140,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Footer Links */}
       <div className="px-4 py-8 border-t border-white/20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -156,7 +154,6 @@ const Footer = () => {
                 Phone: {footerData.contact.phone}
               </p>
 
-              {/* Social Media Icons */}
               <div className="flex gap-3">
                 {footerData.socialMedia.map((social) => {
                   const Icon = social.icon;
@@ -183,7 +180,6 @@ const Footer = () => {
             ))}
           </div>
 
-          {/* Bottom Footer */}
           <div className="flex flex-col md:flex-row justify-between items-center mt-8 pt-8 border-t border-white/20">
             <p className="text-sm text-gray-300 font-light">
               © Copyright 2025. Design by Prashanta Dey
