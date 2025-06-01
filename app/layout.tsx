@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-white text-slate-900 antialiased max-w-screen-xl mx-auto",
+          "min-h-screen bg-white text-slate-900 antialiased max-w-screen-2xl mx-auto",
           inter.variable
         )}
       >
