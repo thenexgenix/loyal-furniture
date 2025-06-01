@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from "./ui/select";
 import Logo from "./logo";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -55,18 +56,18 @@ const Header = () => {
           </div>
           <nav className="max-w-7xl mx-auto mt-4">
             <div className="flex items-center justify-center gap-8">
-              <a
-                href="#"
+              <Link
+                href="/"
                 className="text-[#000000] hover:text-[#380e4f] font-medium"
               >
                 Home
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/shop"
                 className="text-[#000000] hover:text-[#380e4f] font-medium"
               >
                 Shop
-              </a>
+              </Link>
               <a
                 href="#"
                 className="text-[#000000] hover:text-[#380e4f] font-medium"
@@ -108,8 +109,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-
-      {/* Navigation */}
     </header>
   );
 };
