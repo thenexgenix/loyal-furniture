@@ -13,7 +13,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         PRODUCTS
       </div>
       <Header />
-      <main className="flex flex-col justify-center items-center min-h-screen">
+      <main className="flex flex-col justify-center items-center min-h-screen max-w-screen-2xl mx-auto px-4">
         {children}
       </main>
       <Footer />
