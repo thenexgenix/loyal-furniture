@@ -1,17 +1,7 @@
 import React from "react";
 import ProductCard from "@/components/product-card";
 import Link from "next/link";
-import { Product } from "@/lib/mock-data";
-
-interface ProductSectionProps {
-  title: string;
-  products: Product[];
-  seeAllHref?: string;
-  seeAllText?: string;
-  className?: string;
-  productGridClassName?: string;
-  maxProducts?: number;
-}
+import { ProductSectionProps } from "@/types";
 
 const ProductSection: React.FC<ProductSectionProps> = ({
   title,

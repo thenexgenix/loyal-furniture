@@ -1,13 +1,10 @@
 import Image from "next/image";
-import React from "react";
+import React, { FC } from "react";
 import { Button } from "./ui/button";
 import { AspectRatio } from "./ui/aspect-ratio";
+import { Product } from "@/types";
 
-const ProductCard = ({
-  product,
-}: {
-  product: { id: number; name: string; price: number; image: string };
-}) => {
+const ProductCard: FC<{ product: Product }> = ({ product }) => {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-shadow">
       <div className="w-full">

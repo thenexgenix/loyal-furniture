@@ -34,6 +34,7 @@ interface AuthFormProps {
   linkText?: string;
   linkHref?: string;
   linkLabel?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onSubmit: (values: any) => void;
   schema: z.ZodSchema;
   hasTermsCheckbox?: boolean;
@@ -61,7 +62,8 @@ export default function AuthForm({
 
   const form = useForm({
     resolver: zodResolver(schema),
-    defaultValues: fields.reduce((acc, field) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    defaultValues: fields.reduce((acc: any, field: any) => {
       if (field.type === "password") {
         acc[field.name] = "";
       } else if (
@@ -73,7 +75,7 @@ export default function AuthForm({
         acc[field.name] = "";
       }
       return acc;
-    }, {} as Record<string, any>),
+    }, {}),
   });
 
   const togglePasswordVisibility = (fieldName: string) => {

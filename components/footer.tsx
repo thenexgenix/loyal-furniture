@@ -114,7 +114,7 @@ const FooterSection = ({
 
 const Footer = () => {
   return (
-    <footer className="bg-[#380e4f] text-white">
+    <footer className="bg-primary text-white">
       <div className="px-4 py-12">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
@@ -123,7 +123,7 @@ const Footer = () => {
                 Subscribe to our newsletter
               </h2>
               <p className="text-lg text-gray-300">
-                Don't miss latest news & promotions
+                Don&apos;t miss latest news & promotions
               </p>
             </div>
             <div className="flex gap-4 w-full md:w-auto">

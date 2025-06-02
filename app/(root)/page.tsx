@@ -1,7 +1,7 @@
+import FurnitureHero from "./components/furniture-hero";
 import Hero from "./components/Hero";
 import ProductSection from "@/components/ProductSection";
 
-// Sample product data
 const featuredProducts = [
   {
     id: 1,
@@ -60,33 +60,36 @@ const Home = async () => {
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return (
-    <div className="w-full py-16">
+    <section className="w-full">
       <Hero />
+      <div className="px-4">
+        <ProductSection
+          title="Featured Products"
+          products={featuredProducts}
+          seeAllHref="/shop?category=featured"
+          maxProducts={4}
+          className="py-8 px-4"
+        />
 
-      <ProductSection
-        title="Featured Products"
-        products={featuredProducts}
-        seeAllHref="/shop?category=featured"
-        maxProducts={4}
-        className="py-8 px-4"
-      />
+        <FurnitureHero />
 
-      <ProductSection
-        title="Best Sellers"
-        products={bestSellers}
-        seeAllHref="/shop?category=bestsellers"
-        maxProducts={4}
-        className="py-8 px-4"
-      />
+        <ProductSection
+          title="Best Sellers"
+          products={bestSellers}
+          seeAllHref="/shop?category=bestsellers"
+          maxProducts={4}
+          className="py-8 px-4"
+        />
 
-      <ProductSection
-        title="All Products"
-        products={featuredProducts.concat(bestSellers)}
-        seeAllHref="/shop"
-        maxProducts={10}
-        className="py-8 px-4"
-      />
-    </div>
+        <ProductSection
+          title="All Products"
+          products={featuredProducts.concat(bestSellers)}
+          seeAllHref="/shop"
+          maxProducts={10}
+          className="py-8 px-4"
+        />
+      </div>
+    </section>
   );
 };
 
