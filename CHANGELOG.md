@@ -1,5 +1,35 @@
 # Changelog
 
+## [v1.8.0] - 2025-06-04
+
+### 🏷️ Hero Section Refactor, Category Page Improvements & New Components
+
+This release refactors the Hero section for better modularity, introduces new components for hero image and category cards, and improves the dynamic category page with robust error handling and conditional rendering.
+
+---
+
+## 📋 Summary of Changes
+
+### ✨ New Features & Improvements
+
+#### 🖼️ Hero Section Refactor
+- **New `HeroImage` Component**: Extracted hero image and headline into a dedicated, reusable component.
+- **New `CategoryCards` Component**: Handles all category card rendering and active state logic.
+- **Simplified `Hero` Component**: Now only composes `HeroImage` and `CategoryCards` for a cleaner structure.
+
+#### 🗂️ Category Page Enhancements
+- **Dynamic Category Page**: Improved `[category_name]/page.tsx` with async param handling, error catching, and conditional rendering of `FurnitureHero` for sofas.
+- **Base Category Redirect**: Added `/category/page.tsx` to redirect users to the homepage if no category is specified.
+- **Robust Error Handling**: Ensures users are redirected to `/shop` if category params are missing or errors occur.
+
+### 🗂️ Files Modified / Added
+- **`app/(root)/components/Hero.tsx`**: Refactored to use new subcomponents.
+- **`components/hero-image.tsx`**: New component for hero image and headline.
+- **`components/category-cards.tsx`**: New/updated component for category cards and active state.
+- **`app/(root)/category/[category_name]/page.tsx`**: Improved async param handling, error catching, and conditional rendering.
+- **`app/(root)/category/page.tsx`**: New file for base category redirect.
+
+
 ## [v1.7.0] - 2025-06-02
 
 ### 🎨 Furniture Hero Component Grid Layout & AuthForm TypeScript Fixes
