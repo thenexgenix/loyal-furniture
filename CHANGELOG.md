@@ -1,5 +1,62 @@
 # Changelog
 
+## [v1.9.0] - 2025-06-10
+
+### 🛒 Cart Refactoring, Color System Update & Component Architecture Improvements
+
+This release focuses on major cart page refactoring following senior developer best practices, comprehensive color system update for brand consistency, and contact page enhancements with improved user experience.
+
+---
+
+## 📋 Summary of Changes
+
+### ✨ New Features & Improvements
+
+#### 🛒 Cart Page Senior Developer Refactoring
+- **Component Architecture**: Refactored cart into modular components (`CartItem`, `OrderSummary`, `CartHeader`)
+- **Performance Optimization**: Implemented `React.memo`, `useCallback`, and `useMemo` for better performance
+- **Accessibility**: Added ARIA labels and semantic HTML for screen readers
+- **TypeScript Safety**: Enhanced interfaces and prop types for better type safety
+- **Constants**: Extracted magic numbers (DELIVERY_FEE, MIN_QUANTITY) for maintainability
+- **Single-Line Layout**: Redesigned cart items with horizontal layout: Image | Name | Quantity | Price | Delete
+- **Quantity Controls**: Replaced select dropdown with intuitive plus/minus buttons
+- **Error Prevention**: Added proper validation and disabled states
+
+#### 🎨 Color System Overhaul
+- **Purple-Centered Palette**: Updated entire color scheme to complement primary color `oklch(0.2726 0.1137 310.32)`
+- **Harmonious Hues**: All colors now use 280-340 degree hues for visual consistency
+- **Light Theme**: Clean purple-tinted whites and subtle lavender accents
+- **Dark Theme**: Deep purple-blacks with proper contrast ratios
+- **Chart Colors**: Beautiful purple gradient spectrum for data visualization
+- **Sidebar Integration**: Cohesive sidebar colors matching main theme
+
+#### 📞 Contact Page Enhancements
+- **Modern Design**: Elegant gradient hero section with contact information
+- **Contact Information**: Comprehensive contact details with icons and proper formatting
+- **Form Validation**: Complete contact form with proper field validation
+- **User Experience**: Smooth form submission with success feedback
+- **Responsive Layout**: Two-column layout adapting to mobile screens
+
+#### 🧭 Header Navigation Improvements
+- **Enhanced Search**: Advanced category filtering with dropdown selection
+- **Navigation Structure**: Clean navigation menu with hover states
+- **Contact Integration**: Phone number display and user action icons
+- **Shopping Features**: Wishlist counter and cart access with visual indicators
+
+### 🗂️ Files Modified
+
+#### 🛒 Cart System
+- **`app/(root)/cart/page.tsx`**: Complete refactor with modular architecture, performance optimizations, and accessibility improvements
+
+#### 🎨 Design System
+- **`app/globals.css`**: Comprehensive color system update with purple-centered palette for both light and dark themes
+
+#### 📞 Contact & Navigation
+- **`app/(root)/contact-us/page.tsx`**: New contact page with modern design and comprehensive contact information
+- **`components/header.tsx`**: Enhanced navigation with improved search functionality and user experience
+
+---
+
 ## [v1.8.0] - 2025-06-04
 
 ### 🏷️ Hero Section Refactor, Category Page Improvements & New Components

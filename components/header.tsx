@@ -89,23 +89,19 @@ const Header = () => {
             <Phone className="h-4 w-4" />
             <span className="font-medium">01973227349</span>
           </div>
-          <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" className="text-[#000000]">
+          <div className="flex items-center space-x-4">
+            <Link href="/profile" className="text-[#000000]">
               <User className="h-5 w-5" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-[#000000] relative"
-            >
+            </Link>
+            <Link href="/wishlist" className="relative">
               <Heart className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 bg-[#89d22c] text-[#000000] text-xs rounded-full w-4 h-4 flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 bg-[#89d22c]  text-xs rounded-full w-4 h-4 flex items-center justify-center">
                 0
               </span>
-            </Button>
-            <Button variant="ghost" size="icon" className="text-[#000000]">
+            </Link>
+            <Link href={"/cart"} className="">
               <ShoppingCart className="h-5 w-5" />
-            </Button>
+            </Link>
           </div>
         </div>
       </div>

@@ -45,7 +45,7 @@ const ContactUs = () => {
         <h1 className="text-4xl font-bold text-white">Contact Us</h1>
       </div>
 
-      <div className="absolute top-32 left-1/2 transform -translate-x-1/2 w-full max-w-7xl mx-auto px-4">
+      <div className="absolute top-32 left-1/2 transform -translate-x-1/2 w-full max-w-7xl mx-auto">
         <div className="bg-[#380e4f] p-8 md:p-12 grid md:grid-cols-2 gap-8 items-start shadow-2xl">
           <div className="text-[#ffffff]">
             <h2 className="text-4xl font-bold mb-6">Get in Touch</h2>
