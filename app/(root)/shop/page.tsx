@@ -13,6 +13,7 @@ import {
 import Image from "next/image";
 import React, { useState } from "react";
 import ProductCard from "@/components/product-card";
+import { allProducts } from "@/lib/mock-data";
 
 const shopData = {
   categories: [
@@ -49,80 +50,7 @@ const shopData = {
     { name: "Apartment Bed", brand: "Sit", price: 850 },
     { name: "Modern chair", brand: "Romance", price: 2000 },
   ],
-  products: [
-    {
-      id: 1,
-      name: "Elle Decor Accent Arm Chair",
-      price: 1250,
-      image: "/placeholder.svg?height=200&width=200",
-    },
-    {
-      id: 2,
-      name: "Elle Decor Accent Arm Chair",
-      price: 1250,
-      image: "/placeholder.svg?height=200&width=200",
-    },
-    {
-      id: 3,
-      name: "Elle Decor Accent Arm Chair",
-      price: 1250,
-      image: "/placeholder.svg?height=200&width=200",
-    },
-    {
-      id: 4,
-      name: "Modern Furniture",
-      price: 1250,
-      image: "/placeholder.svg?height=200&width=200",
-    },
-    {
-      id: 5,
-      name: "Modern Furniture Set",
-      price: 1250,
-      image: "/placeholder.svg?height=200&width=200",
-    },
-    {
-      id: 6,
-      name: "Furniture Sofa Set",
-      price: 1250,
-      image: "/placeholder.svg?height=200&width=200",
-    },
-    {
-      id: 7,
-      name: "Luxury Gold Accent Table",
-      price: 1250,
-      image: "/placeholder.svg?height=200&width=200",
-    },
-    {
-      id: 8,
-      name: "Classic Table Collection",
-      price: 1250,
-      image: "/placeholder.svg?height=200&width=200",
-    },
-    {
-      id: 9,
-      name: "Furniture & Dining Sets",
-      price: 1250,
-      image: "/placeholder.svg?height=200&width=200",
-    },
-    {
-      id: 10,
-      name: "Olivia Glass Lamp",
-      price: 1250,
-      image: "/placeholder.svg?height=200&width=200",
-    },
-    {
-      id: 11,
-      name: "Best Bedroom Lamp",
-      price: 1250,
-      image: "/placeholder.svg?height=200&width=200",
-    },
-    {
-      id: 12,
-      name: "Furniture & Dining Sets",
-      price: 1250,
-      image: "/placeholder.svg?height=200&width=200",
-    },
-  ],
+  products: allProducts,
   pagination: [1, 2, 3, 4, 5, 6, "...", 15],
 };
 

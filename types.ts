@@ -1,8 +1,11 @@
+import { StaticImageData } from "next/image";
+
 type Product = {
   id: number;
   name: string;
   price: number;
-  image: string;
+  image: string | StaticImageData;
+  category: string;
 };
 
 type HeroCardProps = {

@@ -1,5 +1,111 @@
 # Changelog
 
+## [v1.10.0] - 2025-06-21
+
+### 🖼️ Comprehensive Product Data System & Real Product Image Integration
+
+This release implements a complete product data overhaul with real furniture images, centralized data management, and enhanced user experience through authentic product visualization across all pages.
+
+---
+
+## 📋 Summary of Changes
+
+### ✨ New Features & Improvements
+
+#### 🖼️ Real Product Image System
+
+- **90+ Real Product Images**: Added authentic furniture images organized by category (chairs, sofas, tables, beds, decor, lamps)
+- **Asset Management System**: Created comprehensive asset index with TypeScript imports for type safety
+- **Category-Based Organization**: Structured asset folders with logical naming conventions for easy maintenance
+- **Image Optimization**: PNG format images optimized for web display with consistent quality
+
+#### 📊 Centralized Product Data Management
+
+- **Comprehensive Product Database**: Created extensive mock data with 80+ real furniture products
+- **Product Collections**: Organized products into `popularProducts`, `latestProducts`, and `allProducts` arrays
+- **Category Integration**: Dynamic category filtering with real product counts from actual data
+- **Type-Safe Implementation**: Full TypeScript integration with proper Product interface compliance
+
+#### 🏗️ Data Architecture Improvements
+
+- **DRY Principle Implementation**: Eliminated duplicate product data across components
+- **Single Source of Truth**: All product data centralized in `lib/mock-data.ts`
+- **Dynamic Category Counts**: Real-time category counts based on actual product data
+- **Consistent Product Structure**: Standardized product objects with id, name, price, image, and category
+
+#### 🎨 Enhanced User Experience
+
+- **Product Card Improvements**: Enhanced styling with centered text, padding, and Bangladeshi currency (৳)
+- **Category Navigation**: Updated footer links to point to actual category pages
+- **Dynamic Content**: Product sections now display real content instead of placeholder data
+- **Visual Consistency**: Uniform product display across home, shop, and category pages
+
+### 🗂️ Files Modified
+
+#### 📸 New Asset System
+
+- **`assets/index.ts`** (NEW): Comprehensive asset export system with 170+ lines of organized imports
+- **`assets/`** (NEW): Added 90+ product images organized by category:
+  - **Chairs**: 4 high-quality chair images (chair1-4.png)
+  - **Sofas**: 16 diverse sofa designs (sofa1-16.png)
+  - **Tables**: 24 various table styles (table1-24.png)
+  - **Beds**: 13 bedroom furniture images (bed1-13.png)
+  - **Decor**: 20 decorative items (decor1-20.png)
+  - **Lamps**: 4 lighting fixtures (lamp1-4.png)
+
+#### 📊 Data Management Updates
+
+- **`lib/mock-data.ts`**: Complete overhaul from placeholder data to comprehensive product database
+  - Added real product imports from asset system
+  - Created `popularProducts`, `latestProducts`, and `allProducts` collections
+  - Implemented proper product categorization with authentic names and pricing
+  - Structured data for easy maintenance and scalability
+
+#### 🏠 Page Implementation Updates
+
+- **`app/(root)/page.tsx`**:
+
+  - Replaced hardcoded product arrays with centralized data imports
+  - Updated product section titles and organization
+  - Improved product display limits and categories
+
+- **`app/(root)/shop/page.tsx`**:
+
+  - Integrated centralized product data system
+  - Removed duplicate product definitions
+  - Enhanced data consistency across shop filtering
+
+- **`app/(root)/category/[category_name]/page.tsx`**:
+  - Implemented dynamic category filtering using real product data
+  - Added intelligent product count calculation based on category
+  - Enhanced category-based product display
+
+#### 🧩 Component Enhancements
+
+- **`components/category-cards.tsx`**:
+
+  - Dynamic category counts from real product data
+  - Replaced hardcoded numbers with actual product filtering
+  - Improved category card accuracy and relevance
+
+- **`components/product-card.tsx`**:
+
+  - Enhanced product card styling with centered text layout
+  - Added Bangladeshi currency (৳) for local market relevance
+  - Improved image padding and visual presentation
+
+- **`components/ProductSection.tsx`**:
+
+  - Typography refinements for better visual hierarchy
+  - Consistent heading styles across product sections
+
+- **`components/footer.tsx`**:
+  - Updated category navigation links to actual category pages
+  - Improved footer link structure and organization
+  - Changed from anchor tags to Next.js Link components
+
+---
+
 ## [v1.9.0] - 2025-06-10
 
 ### 🛒 Cart Refactoring, Color System Update & Component Architecture Improvements
@@ -13,6 +119,7 @@ This release focuses on major cart page refactoring following senior developer b
 ### ✨ New Features & Improvements
 
 #### 🛒 Cart Page Senior Developer Refactoring
+
 - **Component Architecture**: Refactored cart into modular components (`CartItem`, `OrderSummary`, `CartHeader`)
 - **Performance Optimization**: Implemented `React.memo`, `useCallback`, and `useMemo` for better performance
 - **Accessibility**: Added ARIA labels and semantic HTML for screen readers
@@ -23,6 +130,7 @@ This release focuses on major cart page refactoring following senior developer b
 - **Error Prevention**: Added proper validation and disabled states
 
 #### 🎨 Color System Overhaul
+
 - **Purple-Centered Palette**: Updated entire color scheme to complement primary color `oklch(0.2726 0.1137 310.32)`
 - **Harmonious Hues**: All colors now use 280-340 degree hues for visual consistency
 - **Light Theme**: Clean purple-tinted whites and subtle lavender accents
@@ -31,6 +139,7 @@ This release focuses on major cart page refactoring following senior developer b
 - **Sidebar Integration**: Cohesive sidebar colors matching main theme
 
 #### 📞 Contact Page Enhancements
+
 - **Modern Design**: Elegant gradient hero section with contact information
 - **Contact Information**: Comprehensive contact details with icons and proper formatting
 - **Form Validation**: Complete contact form with proper field validation
@@ -38,6 +147,7 @@ This release focuses on major cart page refactoring following senior developer b
 - **Responsive Layout**: Two-column layout adapting to mobile screens
 
 #### 🧭 Header Navigation Improvements
+
 - **Enhanced Search**: Advanced category filtering with dropdown selection
 - **Navigation Structure**: Clean navigation menu with hover states
 - **Contact Integration**: Phone number display and user action icons
@@ -46,12 +156,15 @@ This release focuses on major cart page refactoring following senior developer b
 ### 🗂️ Files Modified
 
 #### 🛒 Cart System
+
 - **`app/(root)/cart/page.tsx`**: Complete refactor with modular architecture, performance optimizations, and accessibility improvements
 
 #### 🎨 Design System
+
 - **`app/globals.css`**: Comprehensive color system update with purple-centered palette for both light and dark themes
 
 #### 📞 Contact & Navigation
+
 - **`app/(root)/contact-us/page.tsx`**: New contact page with modern design and comprehensive contact information
 - **`components/header.tsx`**: Enhanced navigation with improved search functionality and user experience
 
@@ -70,22 +183,24 @@ This release refactors the Hero section for better modularity, introduces new co
 ### ✨ New Features & Improvements
 
 #### 🖼️ Hero Section Refactor
+
 - **New `HeroImage` Component**: Extracted hero image and headline into a dedicated, reusable component.
 - **New `CategoryCards` Component**: Handles all category card rendering and active state logic.
 - **Simplified `Hero` Component**: Now only composes `HeroImage` and `CategoryCards` for a cleaner structure.
 
 #### 🗂️ Category Page Enhancements
+
 - **Dynamic Category Page**: Improved `[category_name]/page.tsx` with async param handling, error catching, and conditional rendering of `FurnitureHero` for sofas.
 - **Base Category Redirect**: Added `/category/page.tsx` to redirect users to the homepage if no category is specified.
 - **Robust Error Handling**: Ensures users are redirected to `/shop` if category params are missing or errors occur.
 
 ### 🗂️ Files Modified / Added
+
 - **`app/(root)/components/Hero.tsx`**: Refactored to use new subcomponents.
 - **`components/hero-image.tsx`**: New component for hero image and headline.
 - **`components/category-cards.tsx`**: New/updated component for category cards and active state.
 - **`app/(root)/category/[category_name]/page.tsx`**: Improved async param handling, error catching, and conditional rendering.
 - **`app/(root)/category/page.tsx`**: New file for base category redirect.
-
 
 ## [v1.7.0] - 2025-06-02
 
@@ -100,6 +215,7 @@ This release refactors the furniture hero component to use a proper grid layout 
 ### ✨ New Features & Improvements
 
 #### 🏗️ Furniture Hero Component Refactoring
+
 - **Grid Layout Implementation** - Replaced flexbox with CSS Grid for consistent card heights
 - **Responsive Design** - `grid-cols-1 sm:grid-cols-2` for mobile-first responsive behavior
 - **Reusable HeroCard Component** - Extracted individual card logic into reusable component
@@ -109,12 +225,14 @@ This release refactors the furniture hero component to use a proper grid layout 
 - **Responsive Typography** - Adaptive text sizing from sm to lg breakpoints
 
 #### 🐛 TypeScript Strict Mode Fixes
+
 - **AuthForm Component** - Resolved `@typescript-eslint/no-explicit-any` errors
 - **Proper Type Annotations** - Added ESLint disable comments for necessary any usage
 - **Form Data Types** - Fixed type compatibility between form submission handlers
 - **Build Compatibility** - Ensured production build passes TypeScript strict checks
 
 #### 📱 Responsive Behavior
+
 - **Mobile (xs)** - Single card layout for optimal mobile viewing
 - **Desktop (sm+)** - Two-card grid layout for desktop experience
 - **Flexible Height** - `max-h-[400px]` constraint with proper grid scaling
@@ -123,6 +241,7 @@ This release refactors the furniture hero component to use a proper grid layout 
 ### 🗂️ Files Modified
 
 #### 🎨 Hero Component Updates
+
 - **`app/(root)/components/furniture-hero.tsx`**
   - Complete refactor from flexbox to CSS Grid layout
   - Extracted HeroCard component with proper TypeScript interfaces
@@ -132,6 +251,7 @@ This release refactors the furniture hero component to use a proper grid layout 
   - Responsive padding and typography scaling
 
 #### 🔧 TypeScript Fixes
+
 - **`components/auth/AuthForm.tsx`**
   - Fixed `@typescript-eslint/no-explicit-any` errors on lines 37 and 76
   - Added proper ESLint disable comments for necessary any usage
@@ -139,6 +259,7 @@ This release refactors the furniture hero component to use a proper grid layout 
   - Maintained backward compatibility with existing auth pages
 
 #### 🧹 Code Organization
+
 - **Removed Duplicate Components** - Cleaned up redundant HeroCard.tsx file
 - **Consolidated Implementation** - Single-file component structure for better maintainability
 - **Type Safety** - Full TypeScript coverage with proper interface definitions
@@ -158,6 +279,7 @@ This release introduces a reusable ProductSection component for consistent produ
 ### ✨ New Features
 
 #### 🧩 ProductSection Reusable Component
+
 - **Created ProductSection Component** - Reusable component for displaying products with title and "See All" button
 - **Flexible Configuration** - Configurable props for title, products, links, styling, and product limits
 - **Responsive Grid Layout** - Adaptive grid from 1 column (mobile) to 4 columns (desktop)
@@ -165,12 +287,14 @@ This release introduces a reusable ProductSection component for consistent produ
 - **Brand Consistent Styling** - Uses OKLCH purple theme colors throughout
 
 #### 🏠 Home Page Layout Enhancement
+
 - **Multi-Section Product Display** - Featured Products, Best Sellers, and All Products sections
 - **Hero Section Integration** - Maintains existing interactive category hero
 - **Sample Product Data** - Comprehensive product arrays for demonstration
 - **Improved Page Structure** - Better spacing and layout organization
 
 #### 📊 Data Management
+
 - **Mock Data Integration** - Leverages existing Product type from lib/mock-data.ts
 - **Centralized Product Arrays** - Organized sample data for different product categories
 - **Type Safety** - Full TypeScript integration with proper Product interface
@@ -178,6 +302,7 @@ This release introduces a reusable ProductSection component for consistent produ
 ### 🗂️ Files Modified
 
 #### 📝 New Components
+
 - **`components/ProductSection.tsx`** (NEW)
   - Reusable component with configurable props
   - Title and "See All" button header with justify-between layout
@@ -186,6 +311,7 @@ This release introduces a reusable ProductSection component for consistent produ
   - TypeScript interfaces for type safety
 
 #### 🏠 Home Page Updates
+
 - **`app/(root)/page.tsx`**
   - Added ProductSection component imports and usage
   - Created featuredProducts and bestSellers sample data arrays
@@ -194,6 +320,7 @@ This release introduces a reusable ProductSection component for consistent produ
   - Maintained existing Hero component integration
 
 ### 🎨 Component Features
+
 - **Configurable Props**: title, products, seeAllHref, seeAllText, className, productGridClassName, maxProducts
 - **Responsive Design**: Mobile-first approach with breakpoint-based grid columns
 - **Professional Styling**: OKLCH color scheme with hover effects and transitions
@@ -214,18 +341,21 @@ This release focuses on implementing DRY (Don't Repeat Yourself) principles in t
 ### ✨ New Features
 
 #### 🧩 Component Architecture Refactoring
+
 - **Implemented DRY Principles** - Reduced code duplication by 70% through reusable components
 - **Created Centralized Data Configuration** - All shop data organized in `shopData` object
 - **Built Reusable Filter Components** - `FilterSection`, `CheckboxFilter`, `BrandFilter`, and `BestSellerItem` components
 - **Enhanced Component Composition** - Modular architecture for better maintainability
 
 #### 🎨 UI Component Upgrades
+
 - **AspectRatio Integration** - Replaced custom aspect ratio divs with proper UI AspectRatio component
 - **Pagination Component** - Migrated from custom buttons to professional Pagination UI component
 - **Brand Image Integration** - Added professional SVG brand logos with hover effects
 - **Enhanced Visual Hierarchy** - Improved spacing, layout, and interactive elements
 
 #### 🏷️ Professional Brand Assets
+
 - **Custom Brand Logos** - Created SVG assets for Rosewood, IKEA, Sit, and Romance brands
 - **Brand Directory Structure** - Organized brand assets in `/public/brands/` directory
 - **Visual Brand Identity** - Distinct color schemes and design elements for each brand
@@ -233,7 +363,9 @@ This release focuses on implementing DRY (Don't Repeat Yourself) principles in t
 ### 🗂️ Files Modified
 
 #### 📝 Component Architecture
+
 - **`app/(root)/shop/page.tsx`**
+
   - Complete refactoring with DRY principle implementation
   - Added centralized `shopData` configuration object
   - Created 5 reusable components (`FilterSection`, `CheckboxFilter`, `BrandFilter`, `BestSellerItem`, `PaginationItemComponent`)
@@ -248,8 +380,9 @@ This release focuses on implementing DRY (Don't Repeat Yourself) principles in t
   - Improved component styling with `shadow-lg` and `rounded-none` button
 
 #### 🎨 New Brand Assets
+
 - **`public/brands/rosewood.svg`** (NEW) - Brown furniture-themed logo with wood accent dots
-- **`public/brands/ikea.svg`** (NEW) - Blue and yellow themed logo with furniture elements  
+- **`public/brands/ikea.svg`** (NEW) - Blue and yellow themed logo with furniture elements
 - **`public/brands/sit.svg`** (NEW) - Dark themed logo with chair silhouette
 - **`public/brands/romance.svg`** (NEW) - Pink romantic-themed logo with heart elements
 
@@ -266,6 +399,7 @@ This release implements a modern overlay design pattern for the contact page, en
 ### ✨ New Features
 
 #### 🎨 Contact Page Overlay Design
+
 - **Modern Overlay Pattern** - Contact section now floats elegantly over gradient background
 - **Enhanced Visual Hierarchy** - Professional depth with strategic shadow effects
 - **Improved Form State Management** - Connected all form inputs to React state with proper validation
@@ -276,6 +410,7 @@ This release implements a modern overlay design pattern for the contact page, en
 ### 🗂️ Files Modified
 
 #### 📝 Component Updates
+
 - **`app/(root)/contact-us/page.tsx`**
   - Implemented overlay design pattern with absolute positioning
   - Enhanced gradient background with professional color scheme
@@ -287,7 +422,6 @@ This release implements a modern overlay design pattern for the contact page, en
   - Improved responsive design with proper spacing and layout
   - Added shadow-2xl for professional depth and visual appeal
   - Implemented proper form reset functionality after submission
-
 
 ## [v1.3.0] - 2025-06-01
 
@@ -302,6 +436,7 @@ This release focuses on improving user interface components and user experience 
 ### ✨ New Features
 
 #### 🔍 Header Search Component Redesign
+
 - **Minimal Search Design** - Streamlined search interface with modern rounded-full container
 - **Integrated Category Selector** - Unified search experience with category filtering
 - **Enhanced Visual Design** - Single container with focus states and smooth transitions
@@ -309,6 +444,7 @@ This release focuses on improving user interface components and user experience 
 - **Expanded Categories** - Added Beds and Cabinets for comprehensive furniture filtering
 
 #### 📞 Contact Page Layout Overhaul
+
 - **Overlay Design Pattern** - Contact section now floats over gradient background
 - **Enhanced Visual Hierarchy** - Professional overlay effect with shadow depth
 - **Improved Form Functionality** - Connected form state with proper validation
@@ -318,7 +454,9 @@ This release focuses on improving user interface components and user experience 
 ### 🗂️ Files Modified
 
 #### 📝 Component Updates
+
 - **`components/header.tsx`**
+
   - Redesigned search bar with unified container approach
   - Implemented rounded-full design for modern aesthetics
   - Added focus-within states for better accessibility
@@ -350,6 +488,7 @@ This release focuses on modernizing the footer component by implementing DRY (Do
 ### ✨ New Features
 
 #### 🎨 Footer Component Overhaul
+
 - **Implemented DRY Principle** - Centralized all footer data in `footerData` configuration object
 - **Created Reusable Components** - `FooterLink` and `FooterSection` for consistent styling and behavior
 - **Added Professional Payment Icons** - SVG-based Visa, Mastercard, American Express, and PayPal logos
@@ -357,6 +496,7 @@ This release focuses on modernizing the footer component by implementing DRY (Do
 - **Improved Typography** - Thin, light gray links with smooth hover transitions
 
 #### 🔧 Technical Improvements
+
 - **60% Code Reduction** - Eliminated repetitive footer section code through dynamic rendering
 - **Better Maintainability** - All footer content managed through centralized configuration
 - **Enhanced Accessibility** - Proper `aria-label` attributes and semantic structure
@@ -365,6 +505,7 @@ This release focuses on modernizing the footer component by implementing DRY (Do
 ### 🗂️ Files Modified
 
 #### 📝 Component Updates
+
 - **`components/footer.tsx`**
   - Complete refactoring from hardcoded sections to data-driven approach
   - Added `footerData` configuration object with contact, social media, sections, and payment methods
@@ -376,6 +517,7 @@ This release focuses on modernizing the footer component by implementing DRY (Do
   - Improved hover states and transitions for better UX
 
 #### 🎨 New Assets
+
 - **`public/payments/visa.svg`** (NEW) - Professional Visa card logo
 - **`public/payments/mastercard.svg`** (NEW) - Official Mastercard logo with brand colors
 - **`public/payments/amex.svg`** (NEW) - American Express logo design
@@ -394,6 +536,7 @@ This release represents a comprehensive overhaul of the authentication system, U
 ### ✨ New Features
 
 #### 🔐 Reusable Authentication System
+
 - **Created `AuthForm.tsx`** - A fully reusable authentication form component
 - **Created `authConfig.ts`** - Centralized configuration for form schemas and field definitions
 - **Implemented React Hook Form** with Zod validation for type-safe form handling
@@ -401,12 +544,14 @@ This release represents a comprehensive overhaul of the authentication system, U
 - **Enhanced form validation** with comprehensive error messages and real-time feedback
 
 #### 🎨 Dynamic Loading Page Enhancement
+
 - **Simplified loading page** with Logo component integration
 - **Removed complex animations** for better performance and cleaner code
 - **Maintained branded experience** with "Loyal Furniture" messaging
 - **Optimized animations** using CSS classes instead of inline styles
 
 #### 🎨 CSS Framework Migration
+
 - **Upgraded Tailwind CSS** from v3 HSL format to v4 OKLCH format
 - **Implemented custom purple color scheme** (hue 279) throughout the design system
 - **Enhanced color consistency** across light and dark mode support
@@ -417,20 +562,24 @@ This release represents a comprehensive overhaul of the authentication system, U
 ## 🗂️ Files Modified
 
 ### 📝 Authentication Pages
+
 - **`app/(auth)/sign-up/page.tsx`**
+
   - Completely refactored to use reusable `AuthForm` component
   - Removed duplicate form logic and validation code
   - Simplified component structure from ~150+ lines to ~45 lines
   - Added proper TypeScript typing with Zod schema inference
 
 - **`app/(auth)/login/page.tsx`**
-  - Refactored to use reusable `AuthForm` component  
+  - Refactored to use reusable `AuthForm` component
   - Added "Keep me logged in" checkbox functionality
   - Added "Forgot password" link integration
   - Maintained all original functionality while reducing code duplication
 
 ### 🧩 New Components
+
 - **`components/auth/AuthForm.tsx`** (NEW)
+
   - 229 lines of reusable authentication form logic
   - Configurable fields, validation, and UI elements
   - Password visibility toggle functionality
@@ -444,7 +593,9 @@ This release represents a comprehensive overhaul of the authentication system, U
   - Exported TypeScript types for form data
 
 ### 🎨 UI & Styling Updates
+
 - **`app/globals.css`**
+
   - Migrated from Tailwind CSS v3 HSL format to v4 OKLCH format
   - Implemented purple-themed color palette (hue 279)
   - Added comprehensive CSS custom properties for design system
@@ -457,7 +608,9 @@ This release represents a comprehensive overhaul of the authentication system, U
   - Reduced from 88 lines to 52 lines for better maintainability
 
 ### ⚙️ Configuration & Setup
+
 - **`app/layout.tsx`**
+
   - Simplified layout structure
   - Maintained proper font configuration with Inter
   - Ensured proper body styling and responsive design
