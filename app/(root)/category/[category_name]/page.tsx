@@ -3,33 +3,7 @@ import HeroImage from "@/components/hero-image";
 import ProductSection from "@/components/ProductSection";
 import FurnitureHero from "../../components/furniture-hero";
 import { redirect } from "next/navigation";
-
-const featuredProducts = [
-  {
-    id: 1,
-    name: "Elle Decor Accent Arm Chair",
-    price: 1250,
-    image: "/placeholder.svg?height=200&width=200",
-  },
-  {
-    id: 2,
-    name: "Modern Furniture Set",
-    price: 850,
-    image: "/placeholder.svg?height=200&width=200",
-  },
-  {
-    id: 3,
-    name: "Luxury Gold Accent Table",
-    price: 2000,
-    image: "/placeholder.svg?height=200&width=200",
-  },
-  {
-    id: 4,
-    name: "Classic Table Collection",
-    price: 1750,
-    image: "/placeholder.svg?height=200&width=200",
-  },
-];
+import { allProducts } from "@/lib/mock-data";
 
 const ProductByCategory = async ({
   params,
@@ -59,9 +33,19 @@ const ProductByCategory = async ({
         <div className="px-4">
           <ProductSection
             title={Title}
-            products={featuredProducts}
+            products={allProducts.filter(
+              (product) =>
+                product.category.toLocaleLowerCase() ===
+                category_name.toLocaleLowerCase()
+            )}
             seeAllHref="/shop?category=featured"
-            maxProducts={4}
+            maxProducts={
+              allProducts.filter(
+                (product) =>
+                  product.category.toLocaleLowerCase() ===
+                  category_name.toLocaleLowerCase()
+              ).length
+            }
             className="py-8 px-4"
           />
         </div>

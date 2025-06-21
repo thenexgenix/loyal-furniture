@@ -4,6 +4,7 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Facebook, Instagram, LucideYoutube } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const XIcon = ({ className }: { className?: string }) => (
   <svg
@@ -37,12 +38,11 @@ const footerData = {
     {
       title: "Shop",
       links: [
-        { label: "Chairs", href: "/chairs" },
-        { label: "Beds", href: "/beds" },
-        { label: "Sofas", href: "/sofas" },
-        { label: "Cabinets", href: "/cabinets" },
-        { label: "Armchairs", href: "/armchairs" },
-        { label: "Sale", href: "/sale" },
+        { label: "Chairs", href: "/category/chair" },
+        { label: "Beds", href: "/category/bed" },
+        { label: "Sofas", href: "/category/sofa" },
+        { label: "Tables", href: "/category/table" },
+        { label: "Decor", href: "/category/decor" },
       ],
     },
     {
@@ -85,12 +85,12 @@ const FooterLink = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <a
+  <Link
     href={href}
     className={`text-gray-300 font-light hover:text-white transition-colors duration-200 ${className}`}
   >
     {children}
-  </a>
+  </Link>
 );
 
 const FooterSection = ({

@@ -19,7 +19,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({
   return (
     <section className={`w-full ${className}`}>
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-oklch(0.15 0.02 279)">
+        <h2 className="text-2xl md:text-3xl text-oklch(0.15 0.02 279)">
           {title}
         </h2>
 

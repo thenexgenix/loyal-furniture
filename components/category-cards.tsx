@@ -1,16 +1,42 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
+import { allProducts } from "@/lib/mock-data";
 import { cn } from "@/lib/utils";
 import { Armchair, Bed, Lamp, Sofa, Table } from "lucide-react";
 import Link from "next/link";
 import { FC } from "react";
 
 const categories = [
-  { name: "Chair", icon: Armchair, count: 200, active: true },
-  { name: "Sofa", icon: Sofa, count: 240, active: false },
-  { name: "Table", icon: Table, count: 140, active: false },
-  { name: "Bed", icon: Bed, count: 340, active: false },
-  { name: "Decor", icon: Lamp, count: 440, active: false },
+  {
+    name: "Chair",
+    icon: Armchair,
+    count: allProducts.filter((product) => product.category === "chair").length,
+    active: true,
+  },
+  {
+    name: "Sofa",
+    icon: Sofa,
+    count: allProducts.filter((product) => product.category === "sofa").length,
+    active: false,
+  },
+  {
+    name: "Table",
+    icon: Table,
+    count: allProducts.filter((product) => product.category === "table").length,
+    active: false,
+  },
+  {
+    name: "Bed",
+    icon: Bed,
+    count: allProducts.filter((product) => product.category === "bed").length,
+    active: false,
+  },
+  {
+    name: "Decor",
+    icon: Lamp,
+    count: allProducts.filter((product) => product.category === "decor").length,
+    active: false,
+  },
 ];
 
 interface CategoryCardsProps {
@@ -34,7 +60,7 @@ const CategoryCards: FC<CategoryCardsProps> = ({ category_params }) => {
                     "cursor-pointer transition-all duration-200 hover:shadow-xl hover:-translate-y-1 shadow-lg bg-white text-black hover:bg-gray-50",
                     category_params &&
                       category_params === category.name.toLowerCase() &&
-                      "bg-primary text-white shadow-primary/20 hover:bg-primary/90",
+                      "bg-primary text-white shadow-primary/20 hover:bg-primary/90"
                   )}
                 >
                   <CardContent className="p-4 md:p-6 text-center space-y-3">

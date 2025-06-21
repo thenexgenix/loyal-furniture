@@ -13,14 +13,14 @@ const ProductCard: FC<{ product: Product }> = ({ product }) => {
             src={product.image || "/placeholder.svg"}
             alt={product.name}
             fill
-            className="object-cover"
+            className="object-cover p-5"
           />
         </AspectRatio>
       </div>
-      <div className="p-4">
+      <div className="p-4 text-center">
         <h3 className="font-medium text-sm mb-2">{product.name}</h3>
-        <div className="text-lg font-semibold mb-3">
-          Price: ${product.price.toLocaleString()}
+        <div className="text-lg mb-3">
+          Price: ৳{product.price.toLocaleString()}
         </div>
         <Button className="w-full rounded-none" variant={"default"}>
           Add to Cart
